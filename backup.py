@@ -45,7 +45,7 @@ class GerenciadorBackup:
 
         return f'O backup foi salvo no sistema com suceso'
 
-    def restaurar(self):
+    def restaurar_versao(self):
         if len(self.mementos) > 1:  
             self.mementos.pop()
             self.backup.restore(self.mementos[-1])  
@@ -60,7 +60,7 @@ class GerenciadorBackup:
             for arquivo in i._state:  
                 print(f'  formato: {arquivo.formato}')
                 print(f'  tamanho: {arquivo.tamanho}')
-            print()
+                print()
                 
 
         

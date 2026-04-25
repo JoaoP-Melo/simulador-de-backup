@@ -1,17 +1,17 @@
 from abc import ABC, abstractmethod
 
-class AbsFactory(ABC):
+class Factory(ABC):
     @abstractmethod
     def criar_armazenamento(self):
         pass
 
 
-class FactoryLocal(AbsFactory):
+class FactoryLocal(Factory):
     def criar_armazenamento(self):
         return ArmazenamentoLocal()
     
 
-class FactoryNuvem(AbsFactory):
+class FactoryNuvem(Factory):
     def criar_armazenamento(self):
         return ArmazenamentoNuvem(limite=3)
 
