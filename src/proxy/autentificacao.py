@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-import armazenamentos as am
+import abstract_factory.armazenamentos as am
 
 class Pessoa(ABC):
     def __init__(self, nome, idade, cpf):
